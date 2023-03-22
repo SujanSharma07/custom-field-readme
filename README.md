@@ -18,9 +18,11 @@ Quick start
 
 
 Contents:
+-----------
 
 
 	1: KIdxField
+	-----------
 
 		
 		- This field overrride Django Default CharField and creats ShortUUID with configurable Prefix
@@ -53,10 +55,16 @@ Contents:
 
 
 	2: CreatedDateField
+	-----------
+
+		
 		- This field overrride Django Default DateField and creats date as per local timezone
 		  Word run on AD (Anno Domini) and nepal runs on BS (Bikram Samvat)
+		
 		- This field stores auto BS date
+		
 		- By default it db_index = True
+		
 		- By default converst created_on field to BS, if not found convert timezone.now() to bs and store
 	
 		usage:
@@ -65,8 +73,12 @@ Contents:
 				created_on_bs = CreatedDateField()
 	
 	3: InforcedKeyJSONField
+	-----------
+
 		- This field overrride Django Default JSONField and help control over possibel keys and schema
+		
 		- Have 3 possible models:
+		
 			a: Full 
 				- Here developer can specify full valid schema
 				example:
@@ -75,13 +87,14 @@ Contents:
 				Note: if full=True, schema parameter is must		
 
 				read_time_validate paramter is by default false, this flag controls if developer need readtime validaiton on stored data
+					
 					This helps on conditions when some places invalid json (Not as per schema) directly from database 
-					(If someone try from django environment Django Field validation would not allow against schema but this flag will provide necessary
-					precautions if someone temper directly from database)
+					(If someone try from django environment Django Field validation would not allow against schema but this flag will 					  provide necessary precautions if someone temper directly from database)
 				
 				Schema Samples (To learn deeper follow https://json-schema.org/learn/getting-started-step-by-step):
 					
 					Sample 1:
+					-----------
 
 						{
 						"title" : "work experience",
@@ -104,6 +117,8 @@ Contents:
 						}			
 
 					Sample 2: 
+					-----------
+
 						{   
 						"title": "Product",
 						"description": "A product from Acme's catalog",
@@ -136,15 +151,21 @@ Contents:
 						}
 
 			b: partial 
+			-----------
+
 				- Here developer can specify allowed keys unconcerned about their values
+		
 				- This will inforce keys as must
 				
 				example:
+				
 					meta = InforcedKeyJSONField(partial=True, allowed_keys={"key1", "key2"})
 				
 				Note: if partial=True, allowed_keys parameter is must		
 
 			c: None 
+			-----------
+
 				- Normal JSONField
 				
 				example:
