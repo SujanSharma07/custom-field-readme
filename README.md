@@ -2,7 +2,7 @@
 khalti_kfields
 =====
 
-khalti_fields is a collection Django Fields to fullfill certain company needs.
+khalti_fields is a collection Django Fields to fullfill certain customizations needs.
 Detailed documentation is in the "docs" directory.
 
 Quick start
