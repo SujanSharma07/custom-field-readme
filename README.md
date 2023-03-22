@@ -18,15 +18,24 @@ Quick start
 
 
 Contents:
+
+
 	1: KIdxField
+
+		
 		- This field overrride Django Default CharField and creats ShortUUID with configurable Prefix
+		
 		- Always unique and unblank able
+		
 		- Created field will have only specific characters 23456789ABCDEFGHJKMNPQRSTUVWXYZ
 		  This is to reduce confusions between zero (0) and O (Alphabet), 1 and l and so on.
+		
 		- default max length is 15 but can be reconfigured with max_length parameter.
+		
 		- default lenght is 9 but can be reconfigured with length parameter.
 		  Format: <PREFIX:2><YEAR:2><ShortUUID:8>
 		  prefix is configurable with KIDX_MODEL_MAP varaible from settings
+		
 		
 		example: 
 			
