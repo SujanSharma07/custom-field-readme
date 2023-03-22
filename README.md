@@ -79,7 +79,7 @@ Contents:
 					(If someone try from django environment Django Field validation would not allow against schema but this flag will provide necessary
 					precautions if someone temper directly from database)
 				
-				Schema Samples (To learn deeper follow <a href="https://json-schema.org/learn/getting-started-step-by-step" title="Link to Detailed Schema" traget="_blank">Here</a>):
+				Schema Samples (To learn deeper follow https://json-schema.org/learn/getting-started-step-by-step):
 					
 					Sample 1:
 
